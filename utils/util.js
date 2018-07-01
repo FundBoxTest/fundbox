@@ -55,7 +55,7 @@ module.exports = {
 			  if (isFound) {
 				  cy.log('Found - ', input)
 				  cy.contains(input).click()
-				  cy.contains('Cypress-Node').visibility
+				  cy.contains('Cypress-Node').should('be.visible')
 				  return
 			  } else {
 				  cy.get('.next_page').then((elem) => {
